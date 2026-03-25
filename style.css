@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Mulmaru';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-4@1.1/Mulmaru.woff2') format('woff2');
+  font-weight: normal;
+  font-display: swap;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,9 +14,135 @@
 body {
   background: #000;
   color: #fff;
-  font-family: 'Press Start 2P', monospace;
+  font-family: 'Mulmaru', 'Press Start 2P', monospace;
+  font-size: 16px;
   overflow-x: hidden;
   cursor: default;
+}
+
+.experience-item {
+  margin-bottom: 20px;
+}
+
+.experience-item h4 {
+  font-size: 18px;
+  color: #00ff88;
+  margin-bottom: 8px;
+}
+
+.experience-item .period {
+  font-size: 14px;
+  color: #888;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.company-desc {
+  font-size: 13px;
+  color: #bbb;
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+.project-list {
+  margin-left: 20px;
+}
+
+.project-list li {
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: #ddd;
+  display: flex;
+  align-items: center;
+}
+
+.project-list li::before {
+  content: ">";
+  margin-right: 8px;
+  color: #00ff88;
+  flex-shrink: 0;
+}
+
+.project-item {
+  cursor: pointer;
+  transition: color 0.2s ease;
+  padding: 4px 0;
+}
+
+.project-item:hover {
+  color: #00ff88;
+}
+
+.project-link {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  flex: 1;
+}
+
+.project-link:hover {
+  color: #00ff88;
+}
+
+.project-detail {
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 8px 0 16px 20px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.project-detail h4 {
+  color: #00ff88;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.tech-stack {
+  color: #888;
+  font-size: 13px;
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+.highlight-box {
+  background: rgba(0, 255, 136, 0.1);
+  border-left: 3px solid #00ff88;
+  padding: 12px;
+  margin: 12px 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.detail-list {
+  list-style: none;
+  padding: 0;
+}
+
+.detail-list li {
+  margin-bottom: 8px;
+  padding-left: 16px;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.detail-list li:before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #00ff88;
+}
+
+.detail-list .result {
+  color: #ffaa00;
+  font-weight: bold;
+  background: rgba(255, 170, 0, 0.1);
+  padding: 8px;
+  border-radius: 4px;
+  margin-top: 8px;
 }
 
 canvas#space {
@@ -112,6 +245,11 @@ canvas#space {
   color: #ccc;
   margin-bottom: 14px;
   font-size: 14px;
+}
+
+#contact-overlay a {
+  pointer-events: auto;
+  cursor: pointer;
 }
 
 #contact-overlay ul li::before {
