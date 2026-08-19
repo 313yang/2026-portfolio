@@ -664,12 +664,11 @@ const PROJECT_DETAILS = {
 };
 
 // ============================================================
-// PROJECT ACCORDION FUNCTIONALITY
+// PROJECT ITEM CLICK → resume.html 앵커 이동
 // ============================================================
 document.addEventListener('DOMContentLoaded', function() {
-  // 아코디언 클릭 이벤트 처리
   document.addEventListener('click', function(e) {
-    // 링크 클릭은 그대로 동작하게 하고 버블링 중단
+    // 링크 클릭은 그대로 동작
     if (e.target.tagName === 'A') {
       e.stopPropagation();
       return;
@@ -677,44 +676,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (e.target.classList.contains('project-item')) {
       e.preventDefault();
-
       const projectId = e.target.getAttribute('data-project');
-      const existingDetail = e.target.nextElementSibling;
-
-      // 이미 열려있는 경우 닫기
-      if (existingDetail && existingDetail.classList.contains('project-detail')) {
-        existingDetail.style.maxHeight = '0px';
-        setTimeout(() => {
-          existingDetail.remove();
-        }, 300);
-        return;
-      }
-
-      // 같은 레벨의 다른 열린 아코디언 닫기
-      const projectList = e.target.parentElement;
-      const openDetails = projectList.querySelectorAll('.project-detail');
-      openDetails.forEach(detail => {
-        detail.style.maxHeight = '0px';
-        setTimeout(() => {
-          detail.remove();
-        }, 300);
-      });
-
-      // 새 상세 내용 추가
-      if (PROJECT_DETAILS[projectId]) {
-        const detailDiv = document.createElement('div');
-        detailDiv.className = 'project-detail';
-        detailDiv.innerHTML = PROJECT_DETAILS[projectId];
-        detailDiv.style.maxHeight = '0px';
-        detailDiv.style.overflow = 'hidden';
-        detailDiv.style.transition = 'max-height 0.3s ease';
-
-        e.target.parentNode.insertBefore(detailDiv, e.target.nextSibling);
-
-        // 애니메이션을 위한 지연
-        setTimeout(() => {
-          detailDiv.style.maxHeight = detailDiv.scrollHeight + 'px';
-        }, 10);
+      if (projectId) {
+        window.location.href = `resume.html#${projectId}`;
       }
     }
   });
