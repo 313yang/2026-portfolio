@@ -51,7 +51,7 @@ const PLANETS = [
     offX: 0.1,
     offY: -0.04,
     startProgress: 0.25,
-    endProgress: 0.52,
+    endProgress: 0.50,
     isLast: false,
     content: `
       <div class="experience-item">
@@ -69,31 +69,57 @@ const PLANETS = [
           <li><a href="https://apps.apple.com/kr/app/%EC%82%AC%EA%B3%BC%EA%B2%8C%EC%9E%84-apple-crush/id6758998502" target="_blank" class="project-link">🎮 Claude AI 활용한 웹뷰 기반 iOS 앱</a></li>
         </ul>
       </div>
-
+    `,
+  },
+  {
+    name: "SKILLS",
+    offX: -0.07,
+    offY: 0.06,
+    startProgress: 0.40,
+    endProgress: 0.62,
+    isLast: false,
+    isSkills: true,
+    content: `
       <div class="experience-item">
-        <h4>Soundy - 스포티파이 플레이리스트 스트리밍</h4>
-        <span class="period">(2023.01~02) — 음원 스트리밍 웹 서비스</span>
-        <ul class="project-list">
-          <li><a href="https://www.soundy-playlist.link/" target="_blank" class="project-link">🎵 Spotify API + YouTube 연동 음악 플레이어</a></li>
+        <h4>⚡ TECH STACK</h4>
+        <span class="period">주로 사용하는 기술 스택</span>
+        <ul class="skills-list">
+          <li class="skill-tag core">React</li>
+          <li class="skill-tag core">TypeScript</li>
+          <li class="skill-tag core">Next.js</li>
+          <li class="skill-tag">JavaScript</li>
+          <li class="skill-tag">Vite</li>
+          <li class="skill-tag">Preact</li>
+          <li class="skill-tag">Zustand</li>
+          <li class="skill-tag">TanStack Query</li>
+          <li class="skill-tag">SCSS / CSS</li>
+          <li class="skill-tag">Turborepo</li>
+          <li class="skill-tag">Electron.js</li>
+          <li class="skill-tag">Canvas API</li>
+          <li class="skill-tag tool">Git</li>
+          <li class="skill-tag tool">Storybook</li>
+          <li class="skill-tag tool">Sentry</li>
         </ul>
       </div>
     `,
   },
   {
     name: "BLOG",
-    offX: -0.06,
-    offY: -0.07,
-    startProgress: 0.42,
-    endProgress: 0.70,
+    offX: 0.09,
+    offY: -0.05,
+    startProgress: 0.52,
+    endProgress: 0.76,
     isLast: false,
     content: `
-      <h3>BLOG & ARTICLES</h3>
-      <p>Technical blog posts and development insights.</p>
-      <ul>
-        <li>Frontend Development Tips</li>
-        <li>Canvas API & WebGL Tutorials</li>
-        <li>JavaScript Deep Dive</li>
-      </ul>
+      <div class="experience-item">
+        <h4>📝 DEV.YARNBERRY</h4>
+        <span class="period">개발하면서 배운 것, 만든 것, 삽질한 것을 기록합니다.</span>
+        <ul class="project-list">
+          <li><a href="https://blog.devyarnberry.click/posts/harness-engineering/" target="_blank" class="project-link">🔧 AI 시대 프론트엔드 하네스 설계기: 문서·Git Hook·결함 패턴·품질 점수</a></li>
+          <li><a href="https://blog.devyarnberry.click/posts/table-virtualization/" target="_blank" class="project-link">⚡ 테이블 성능 최적화: 가상화 (Virtualization)</a></li>
+          <li><a href="https://blog.devyarnberry.click/posts/wise-ai-use-with-agentation/" target="_blank" class="project-link">🤖 프론트엔드 개발자로 일하면서 AI 현명하게 사용하기</a></li>
+        </ul>
+      </div>
     `,
   },
 ];
@@ -102,8 +128,8 @@ const CONTACT_PLANET = {
   name: "CONTACT",
   offX: 0,
   offY: 0,
-  startProgress: 0.70,
-  endProgress: 0.95,
+  startProgress: 0.80,
+  endProgress: 0.97,
   isLast: true,
   isTextOnly: true,
   content: `
@@ -111,7 +137,7 @@ const CONTACT_PLANET = {
     <ul>
       <li>Email: <a href="mailto:fghsxvef@naver.com">fghsxvef@naver.com</a></li>
       <li>GitHub: <a href="https://github.com/313yang">github.com/313yang</a></li>
-      <li>Resume: <a href="https://www.notion.so/Frontend-Developer-30b79093cbf0803088f2d29879d97381">Frontend Developer Portfolio</a></li>
+      <li>Resume: <a href="resume.html">Frontend Developer Resume</a></li>
     </ul>
     <p>Feel free to reach out!</p>
   `,
@@ -171,6 +197,20 @@ const PIXEL_ICONS = {
     [1,0,1,1,1,0,0,0,0,1,1],
     [1,0,0,0,0,0,0,0,0,1,1],
     [1,1,1,1,1,1,1,1,1,1,1],
+  ],
+  // Circuit/Chip — skills
+  "SKILLS": [
+    [0,1,0,1,0,1,0,1,0,1,0],
+    [1,1,1,1,1,1,1,1,1,1,1],
+    [0,1,0,1,1,1,1,1,0,1,0],
+    [1,1,1,1,0,1,0,1,1,1,1],
+    [0,1,0,1,1,1,1,1,0,1,0],
+    [1,1,1,0,1,1,1,0,1,1,1],
+    [0,1,0,1,1,1,1,1,0,1,0],
+    [1,1,1,1,0,1,0,1,1,1,1],
+    [0,1,0,1,1,1,1,1,0,1,0],
+    [1,1,1,1,1,1,1,1,1,1,1],
+    [0,1,0,1,0,1,0,1,0,1,0],
   ],
 };
 
@@ -257,7 +297,164 @@ const modalTitle = document.getElementById("modal-title");
 const modalBody = document.getElementById("modal-body");
 const modalClose = document.getElementById("modal-close");
 const contactOverlay = document.getElementById("contact-overlay");
+const zoomOverlay = document.getElementById("zoom-overlay");
 let modalOpen = false;
+
+// ============================================================
+// CUSTOM CURSOR STATE
+// ============================================================
+let mouseX = -100;
+let mouseY = -100;
+let isHoveringPlanet = false;
+
+document.addEventListener("mousemove", (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+document.addEventListener("mouseleave", () => {
+  mouseX = -100;
+  mouseY = -100;
+});
+
+// 커스텀 커서 그리기 (우주선 십자선 스타일)
+function drawCursor(x, y, hovering) {
+  if (x < 0) return;
+  const size = hovering ? 10 : 7;
+  const gap = 4;
+  const color = hovering ? "rgba(0, 255, 136, 1)" : "rgba(255, 255, 255, 0.9)";
+  const glow = hovering ? "rgba(0, 255, 136, 0.3)" : "rgba(255, 255, 255, 0.15)";
+
+  ctx.save();
+
+  // 글로우 원 (hover 시)
+  if (hovering) {
+    ctx.beginPath();
+    ctx.arc(x, y, size + 6, 0, Math.PI * 2);
+    ctx.strokeStyle = glow;
+    ctx.lineWidth = 1;
+    ctx.stroke();
+  }
+
+  // 중앙 점
+  ctx.fillStyle = color;
+  ctx.fillRect(Math.round(x) - 1, Math.round(y) - 1, 2, 2);
+
+  // 십자선 4방향
+  ctx.fillStyle = color;
+  // 위
+  ctx.fillRect(Math.round(x) - 1, Math.round(y) - size - gap, 2, size);
+  // 아래
+  ctx.fillRect(Math.round(x) - 1, Math.round(y) + gap, 2, size);
+  // 왼쪽
+  ctx.fillRect(Math.round(x) - size - gap, Math.round(y) - 1, size, 2);
+  // 오른쪽
+  ctx.fillRect(Math.round(x) + gap, Math.round(y) - 1, size, 2);
+
+  ctx.restore();
+}
+
+// ============================================================
+// LASER EFFECT SYSTEM
+// ============================================================
+const lasers = [];
+
+// 레이저 하나 = 4방향으로 동시에 뻗어나가는 빔
+class Laser {
+  constructor(x, y, isHit) {
+    this.x = x;
+    this.y = y;
+    this.isHit = isHit;
+    this.age = 0;
+    this.duration = isHit ? 0.28 : 0.2;
+
+    // 4방향 빔: 상하좌우
+    this.beams = [
+      { dx: 0,  dy: -1 },
+      { dx: 0,  dy:  1 },
+      { dx: -1, dy:  0 },
+      { dx:  1, dy:  0 },
+    ];
+
+    // 충격파 링
+    this.rings = isHit
+      ? [{ r: 0, maxR: 30, speed: 100 }, { r: 0, maxR: 50, speed: 80 }]
+      : [{ r: 0, maxR: 20, speed: 90 }];
+  }
+
+  update(dt) {
+    this.age += dt;
+    for (const ring of this.rings) {
+      ring.r += ring.speed * dt;
+    }
+  }
+
+  draw() {
+    const t = this.age / this.duration; // 0 → 1
+    if (t >= 1) return;
+
+    const color = this.isHit ? [0, 255, 136] : [255, 255, 255];
+    const [r, g, b] = color;
+
+    ctx.save();
+
+    // -- 충격파 링 (작고 은은하게)
+    for (const ring of this.rings) {
+      const ringT = ring.r / ring.maxR;
+      if (ringT >= 1) continue;
+      const alpha = (1 - ringT) * (1 - t) * 0.4;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, ring.r, 0, Math.PI * 2);
+      ctx.strokeStyle = `rgba(${r}, ${g}, ${b}, ${alpha})`;
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    }
+
+    // -- 4방향 빔 (짧고 빠르게 사라짐)
+    const maxLen = this.isHit ? 80 : 55;
+    const len = maxLen * Math.min(t * 3, 1);
+    const beamAlpha = Math.max(0, 1 - t * 1.8) * (this.isHit ? 0.7 : 0.5);
+
+    for (const beam of this.beams) {
+      const ex = this.x + beam.dx * len;
+      const ey = this.y + beam.dy * len;
+
+      const grad = ctx.createLinearGradient(this.x, this.y, ex, ey);
+      grad.addColorStop(0, `rgba(${r}, ${g}, ${b}, ${beamAlpha})`);
+      grad.addColorStop(1, `rgba(${r}, ${g}, ${b}, 0)`);
+
+      ctx.beginPath();
+      ctx.moveTo(this.x, this.y);
+      ctx.lineTo(ex, ey);
+      ctx.strokeStyle = grad;
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+    }
+
+    // -- 중앙 플래시 (아주 작고 빠르게)
+    const flashAlpha = Math.max(0, 1 - t * 5) * (this.isHit ? 0.6 : 0.4);
+    if (flashAlpha > 0) {
+      const flashR = this.isHit ? 10 : 7;
+      const flashGrad = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, flashR);
+      flashGrad.addColorStop(0, `rgba(${r}, ${g}, ${b}, ${flashAlpha})`);
+      flashGrad.addColorStop(1, `rgba(${r}, ${g}, ${b}, 0)`);
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, flashR, 0, Math.PI * 2);
+      ctx.fillStyle = flashGrad;
+      ctx.fill();
+    }
+
+    ctx.restore();
+  }
+
+  get isDone() {
+    return this.age >= this.duration;
+  }
+}
+
+function fireLaser(x, y, isHit) {
+  lasers.push(new Laser(x, y, isHit));
+}
 
 // CONTACT 링크 클릭 핸들러
 function handleLinkClick(e) {
@@ -273,29 +470,44 @@ modalOverlay.addEventListener("click", (e) => {
   if (e.target === modalOverlay) closeModal();
 });
 
-function openModal(planet) {
-  modalTitle.textContent = planet.name;
-  modalBody.innerHTML = planet.content;
-  modalOverlay.classList.remove("hidden");
-  modalOpen = true;
+function openModal(planet, clickX, clickY) {
+  // 줌인 전환 효과
+  const ox = ((clickX ?? W / 2) / W * 100).toFixed(1) + "%";
+  const oy = ((clickY ?? H / 2) / H * 100).toFixed(1) + "%";
+  zoomOverlay.style.setProperty("--ox", ox);
+  zoomOverlay.style.setProperty("--oy", oy);
+  zoomOverlay.classList.remove("zooming");
+  void zoomOverlay.offsetWidth; // reflow
+  zoomOverlay.classList.add("zooming");
 
-  // 모달 내 링크들에 새창 열기 이벤트 바인딩
-  const modalLinks = modalBody.querySelectorAll('a[target="_blank"]');
-  console.log('Found modal links:', modalLinks.length);
-  modalLinks.forEach(link => {
-    console.log('Binding click event to:', link.href);
-    link.addEventListener('click', function(e) {
-      console.log('Link clicked:', this.href);
-      e.stopPropagation();
-      e.preventDefault();
-      window.open(this.href, '_blank');
+  setTimeout(() => {
+    modalTitle.textContent = planet.name;
+    modalBody.innerHTML = planet.content;
+    modalOverlay.classList.remove("hidden");
+    modalOverlay.classList.add("opening");
+    modalOpen = true;
+    document.body.classList.add("modal-open");
+
+    // 줌 오버레이 fade out
+    zoomOverlay.classList.remove("zooming");
+
+    // 모달 내 링크들에 새창 열기 이벤트 바인딩
+    const modalLinks = modalBody.querySelectorAll('a[target="_blank"]');
+    modalLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.stopPropagation();
+        e.preventDefault();
+        window.open(this.href, '_blank');
+      });
     });
-  });
+  }, 380);
 }
 
 function closeModal() {
   modalOverlay.classList.add("hidden");
+  modalOverlay.classList.remove("opening");
   modalOpen = false;
+  document.body.classList.remove("modal-open");
 }
 
 // ============================================================
@@ -370,15 +582,22 @@ function hitTestPlanet(mx, my) {
 canvas.addEventListener("click", (e) => {
   if (modalOpen) return;
   const rect = canvas.getBoundingClientRect();
-  const hit = hitTestPlanet(e.clientX - rect.left, e.clientY - rect.top);
-  if (hit) openModal(hit);
+  const cx_ = e.clientX - rect.left;
+  const cy_ = e.clientY - rect.top;
+  const hit = hitTestPlanet(cx_, cy_);
+
+  // 레이저 발사! 행성 클릭이면 초록, 허공이면 흰색
+  fireLaser(cx_, cy_, !!hit);
+
+  if (hit) openModal(hit, e.clientX, e.clientY);
 });
 
 canvas.addEventListener("mousemove", (e) => {
   if (modalOpen) return;
   const rect = canvas.getBoundingClientRect();
   const hit = hitTestPlanet(e.clientX - rect.left, e.clientY - rect.top);
-  canvas.style.cursor = hit ? "pointer" : "default";
+  isHoveringPlanet = !!hit;
+  canvas.style.cursor = "none";
 });
 
 // ============================================================
@@ -398,9 +617,10 @@ function render(now) {
   warpAmount += (warpTarget - warpAmount) * Math.min(dt * warpSpeed, 1);
 
   // -- Clear (별 잔상은 유지하되, 섹션 스크롤 잔상은 제거)
-  const baseTrailAlpha = 0.15; // 별들의 기본 잔상
-  const scrollTrailReduction = isScrolling ? 0.1 : 0; // 스크롤 중일 때 잔상 더 제거
-  const trailAlpha = Math.max(0.05, baseTrailAlpha + scrollTrailReduction);
+  const baseTrailAlpha = 0.15;
+  const scrollTrailReduction = isScrolling ? 0.1 : 0;
+  const laserClear = lasers.length > 0 ? 0.35 : 0; // 레이저 있을 때 잔상 빨리 지움
+  const trailAlpha = Math.max(0.05, baseTrailAlpha + scrollTrailReduction + laserClear);
 
   ctx.fillStyle = `rgba(0, 0, 0, ${trailAlpha})`;
   ctx.fillRect(0, 0, W, H);
@@ -561,6 +781,18 @@ function render(now) {
     planetLabel.style.opacity = "1";
   } else {
     planetLabel.style.opacity = "0";
+  }
+
+  // -- Custom cursor (canvas 위에 마지막으로 그리기)
+  if (!modalOpen) {
+    // 레이저 업데이트 & 드로우
+    for (let i = lasers.length - 1; i >= 0; i--) {
+      lasers[i].update(dt);
+      lasers[i].draw();
+      if (lasers[i].isDone) lasers.splice(i, 1);
+    }
+
+    drawCursor(mouseX, mouseY, isHoveringPlanet);
   }
 
   requestAnimationFrame(render);

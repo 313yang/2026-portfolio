@@ -17,7 +17,47 @@ body {
   font-family: 'Mulmaru', 'Press Start 2P', monospace;
   font-size: 16px;
   overflow-x: hidden;
+  cursor: none;
+}
+
+/* 커스텀 커서 - 모달 열릴 땐 기본 커서 복원 */
+body.modal-open {
   cursor: default;
+}
+body.modal-open * {
+  cursor: default !important;
+}
+
+/* 줌인 전환 오버레이 */
+#zoom-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(circle at var(--ox, 50%) var(--oy, 50%), transparent 0%, black 100%);
+  z-index: 99;
+  pointer-events: none;
+  opacity: 0;
+  transition: none;
+}
+#zoom-overlay.zooming {
+  animation: zoomIn 0.55s ease-in forwards;
+}
+@keyframes zoomIn {
+  0%   { opacity: 0; background-size: 100%; }
+  40%  { opacity: 1; background: radial-gradient(circle at var(--ox, 50%) var(--oy, 50%), transparent 0%, black 30%); }
+  100% { opacity: 1; background: black; }
+}
+
+/* 모달 열릴 때 페이드인 */
+#modal-overlay {
+  animation: none;
+}
+#modal-overlay.opening {
+  animation: modalFadeIn 0.2s ease forwards;
+}
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 .experience-item {
@@ -339,4 +379,55 @@ canvas#space {
 
 #modal::-webkit-scrollbar-thumb {
   background: #fff;
+}
+
+/* Skills list */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+}
+
+.skills-list li.skill-tag::before {
+  content: none;
+}
+
+.skill-tag {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #fff;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #fff;
+  font-family: 'Press Start 2P', monospace;
+  transition: background 0.15s, color 0.15s;
+  cursor: default;
+}
+
+.skill-tag:hover {
+  background: #fff;
+  color: #000;
+}
+
+.skill-tag.core {
+  border-color: #00ff88;
+  color: #00ff88;
+}
+
+.skill-tag.core:hover {
+  background: #00ff88;
+  color: #000;
+}
+
+.skill-tag.tool {
+  border-color: #888;
+  color: #888;
+}
+
+.skill-tag.tool:hover {
+  background: #888;
+  color: #000;
 }
