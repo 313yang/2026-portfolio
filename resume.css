@@ -643,6 +643,8 @@ body {
     color: #1a7a4a;
     border-bottom-color: #1a7a4a;
     font-size: 9px;
+    break-after: avoid;
+    page-break-after: avoid;
   }
 
   /* summary */
@@ -661,8 +663,9 @@ body {
   .company-block {
     background: #fff;
     border-color: #ddd;
-    break-inside: avoid;
-    page-break-inside: avoid;
+    break-inside: auto;
+    page-break-inside: auto;
+    margin-bottom: 24px;
   }
 
   .company-block::before {
@@ -681,8 +684,10 @@ body {
   /* project block */
   .project-block {
     border-bottom-color: #eee;
-    break-inside: avoid;
-    page-break-inside: avoid;
+    break-inside: auto;
+    page-break-inside: auto;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
   }
 
   .project-name {
@@ -781,9 +786,11 @@ body {
   }
 
   /* 페이지 나눔 제어 */
+  /* resume-section은 내용이 길어서 avoid 걸면 통째로 다음 페이지로 밀려 여백 발생 — 제거 */
   .resume-section {
-    break-inside: avoid;
-    page-break-inside: avoid;
+    break-inside: auto;
+    page-break-inside: auto;
+    margin-bottom: 36px;
   }
 
   /* 애니메이션 제거 */
